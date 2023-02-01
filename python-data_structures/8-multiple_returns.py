@@ -2,8 +2,6 @@
 def multiple_returns(sentence):
     # sentence = "At school, I learnt C!"
     if sentence:
-        length = len(sentence)
+        return (len(sentence), sentence[0])
     else:
-        length = None
-    first = sentence[0]
-    return length, first
+        return 0, None
