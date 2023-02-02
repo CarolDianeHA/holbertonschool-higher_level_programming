@@ -11,9 +11,6 @@ def roman_to_int(roman_string):
         if digit_value >= last_digit_value:
             value += digit_value
             last_digit_value = digit_value
-
-        elif digit_value == None:
-            return 0
         else:
             value -= digit_value
 
