@@ -4,8 +4,9 @@
 
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix"""
+    message = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(message)
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
@@ -17,5 +18,5 @@ def matrix_divided(matrix, div):
     for row in matrix:
         for value in row:
             if type(value) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(message)
     return [[round((element/div), 2) for element in row] for row in matrix]
