@@ -13,3 +13,41 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say_my_name("Pablo")
+My name is Pablo 
+>>> say_my_name("Rodrigo", 8)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(124, "martin")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("Ricky", str(14))
+My name is Ricky 14
+>>> say_my_name("Ricky", "14")
+My name is Ricky 14
+>>> say_my_name(8, 8)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("Pedro", "Maria", "Pedro2")
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+>>> say_my_name("Pablo", ["Rodrigo"])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(["Pablo"], "Rodrigo")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name(str[123], "Rodrigo")
+Traceback (most recent call last):
+    ...
+TypeError: 'type' object is not subscriptable
