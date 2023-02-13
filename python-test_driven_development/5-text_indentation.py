@@ -17,7 +17,7 @@ def text_indentation(text):
             if (flag == 0):
                 print(i, end='')
             else:
-                if(i == '' or i == '\t'):
+                if(i == ' ' or i == '\t'):
                     pass
                 else:
                     print(i, end='')
