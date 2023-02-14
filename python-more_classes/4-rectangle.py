@@ -64,4 +64,4 @@ class Rectangle:
         """String representation"""
         width = self.__width
         height = self.__height
-        return "Rectangle ({:d}, {:d})".format(width, height)
+        return "Rectangle({:d}, {:d})".format(width, height)
