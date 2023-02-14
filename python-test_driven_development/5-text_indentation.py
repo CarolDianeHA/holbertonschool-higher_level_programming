@@ -8,7 +8,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     flag = 0
     for i in text:
-        if (i  == '.' or i == '?' or i == ':'):
+        if (i == '.' or i == '?' or i == ':'):
             print(i)
             print()
             print()
