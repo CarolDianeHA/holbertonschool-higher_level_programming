@@ -54,9 +54,3 @@ Scenario 5
 []
 >>> my_list.print_sorted()
 []
-
-Scenario 6
-
->>> l = MyList()
->>> l.print_sorted()
-[]
