@@ -46,3 +46,11 @@ Scenario 4
 >>> my_list.append(float('inf'))
 >>> print(my_list)
 [-1, inf]
+
+Scenario 5
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
