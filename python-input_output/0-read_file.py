@@ -5,5 +5,5 @@
 def read_file(filename=""):
     """function to read files"""
     with open(filename, encoding='utf8') as file:
-        contents = file.read()
-        print(contents)
+        for line in file:
+            print(line.strip())
