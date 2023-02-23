@@ -7,5 +7,4 @@ import json
 
 def from_json_string(my_str):
     """_summary_"""
-    python_object = json.loads(my_str)
-    return python_object
+    return json.loads(my_str)
