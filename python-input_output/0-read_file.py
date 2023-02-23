@@ -6,4 +6,4 @@ def read_file(filename=""):
     """function to read files"""
     with open(filename, encoding='utf8') as file:
         for line in file:
-            print(line.strip())
+            print(line, end='')
