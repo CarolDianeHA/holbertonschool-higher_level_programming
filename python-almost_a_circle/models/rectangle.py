@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle Class that inherits from Base"""
 
@@ -35,4 +36,22 @@ class Rectangle(Base):
         """Setter height"""
         self.__height = value
 
+    @property
+    def x(self):
+        """Getter x"""
+        return self.__x
 
+    @x.setter
+    def x(self, value):
+        """Setter x"""
+        self.__x = value
+
+    @property
+    def y(self):
+        """Getter y"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Setter y"""
+        self.__y = value
