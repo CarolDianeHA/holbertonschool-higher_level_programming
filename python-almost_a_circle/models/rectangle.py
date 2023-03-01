@@ -100,13 +100,9 @@ class Rectangle(Base):
         h = self.__height
         return f"[Rectangle] ({id}) {x}/{y} - {w}/{h}"
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """Update the Rectangle class"""
         arguments = ("id", "width", "height", "x", "y")
         if args:
             for i in range(len(args)):
                 setattr(self, arguments[i], args[i])
-        else:
-            for i, ii in kwargs.items():
-                if hasattr(self, i):
-                    setattr(self, i, ii)
