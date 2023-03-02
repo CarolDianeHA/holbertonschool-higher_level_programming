@@ -2,6 +2,8 @@
 
 """Base Class"""
 
+import json
+
 
 class Base:
     """Class manage id attributes"""
@@ -16,3 +18,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Return JSON string representation of list_dictionary"""
+        return json.dumps(list_dictionaries)
