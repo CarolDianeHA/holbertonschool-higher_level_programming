@@ -11,7 +11,8 @@ class RectangleTest(unittest.TestCase):
 def SetUp(self):
     Base._Base__nb_objects = 0
 
-
+def test_rectangle(self):
+    self.assertEqual(1, 2)
 
 if __name__ == '__main__':
     unittest.main()
