@@ -28,10 +28,9 @@ if __name__ == "__main__":
               WHERE states.name = %s ORDER BY cities.id ASC;"
     cursor.execute(querty, (state,))
     rows = cursor.fetchall()
-    for i in range(len(rows)):
-        if i != len(rows) - 1:
-            print("{}, ".format(rows[i][0]), end="")
-        else:
-            print(rows[i][0])
+    if rows:
+        print(", ".join(row[0] for row in rows))
+    else:
+        print()
 
     db.close()
