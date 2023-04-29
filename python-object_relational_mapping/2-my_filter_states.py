@@ -19,7 +19,8 @@ if __name__ == "__main__":
         port=3306)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name='{}' ORDER BY id ASC;".format(state))
+    cursor.execute(f"SELECT * FROM states WHERE\
+                   name='{state}' COLLATE utf8mb4_bin ORDER BY id ASC;")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
