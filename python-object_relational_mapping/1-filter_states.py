@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM states WHERE UPPER(name) LIKE UPPER('N%') ORDER BY id ASC;")
+        "SELECT * FROM states WHERE\
+             name LIKE 'N%' COLLATE utf8mb4_bin ORDER BY id ASC;")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
