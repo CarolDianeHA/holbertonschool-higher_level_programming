@@ -16,16 +16,15 @@ if __name__ == "__main__":
     url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     url = url.format(user, password, db_name)
 
-    # Create the engine and session
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                       .format(user, password, db_name), pool_pre_ping=True)
-Base.metadata.create_all(engine)
+    """Create the engine and session."""
+    engine = create_engine(url, pool_pre_ping=True)
+    Base.metadata.create_all(engine)
 
-Session = sessionmaker(bind=engine)
-session = Session()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-query = session.query(State).order_by(State.id)
-states = query.all()
+    query = session.query(State).order_by(State.id)
+    states = query.all()
 
-for state in states:
-    print("{}: {}".format(state.id, state.name))
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
